@@ -1,0 +1,105 @@
+#what{
+    .table{
+        width: 100%;
+        font-size: 14px;
+        border-style: none;
+        box-sizing: border-box;
+
+
+        .heading{
+            background: rgba(255, 255,255, 0.1);
+            display: flex;
+            border-bottom: 2px solid $black;
+            font-weight: 600;
+        }
+        .row{
+            background: rgba(255, 255,255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid $black;
+
+            &:hover{
+                background: rgba(255, 255,255, 0.1);
+            }
+        }
+
+       
+        .h-col1{
+            padding: 13px 0 13px 16px;
+            width: 25%;
+        }
+        .h-col2{
+            padding: 13px 0 13px 0;
+            width: 34%;
+            margin-left: -1px;
+        }
+        .h-col3{
+            padding: 13px 0 13px 13px;
+            width: 21%;
+        }
+        .h-col4{
+            padding: 13px 0 13px 0;
+            width: 20%;
+        }
+
+        .col1{
+            width: 25%;
+            padding:9px 0 9px 16px ;
+        }
+        .col2{
+            width: 36%;
+            padding:9px 0 9px 0 ;
+            margin-left: 8px;
+        }
+        .col3{
+            width: 19%;
+            padding:9px 3px 9px 5px ;
+        }
+        .col4{
+            width: 22%;
+            padding:9px 13px 9px 0 ;
+
+            a{
+                color: $white;
+                text-decoration: none;
+                border-bottom: 1px solid white;
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    #what{
+        // margin-top: 96px;
+
+        .table{
+            .h-col2, .h-col3, .col2, .col3{
+                display: none;
+            }
+
+            .h-col1, .col1{
+                width: 43%;
+                padding: 8px 0 8px 12px;
+            }
+            .col4{
+                width: 57%;
+            }
+        }
+    }
+
+}
+@media (max-width:480px) {
+    #what{
+        // margin-top: 96px;
+
+        .table{
+            .h-col1, .col1{
+                width: 70%;
+            }
+            .col4{
+                width: 30%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,125 @@
+#skill-section{
+    margin-top: 50px;
+
+    .row2{
+        margin-top: 39px !important;
+    }
+    .row{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
+
+        .title{
+            width: 43%;
+
+            h2{
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+            }
+        }
+        .technology{
+            width: 57%;
+
+            .text{
+                line-height: 24px;
+            }
+
+            .box{
+                width: 100%;
+                padding-top: 32px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 10px;
+
+                .item{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+                   
+                    .svg{
+                        width: 28px;
+                        height: 28px;
+                    }
+                    p{
+                        margin-left: 16px;
+                        font-size: 14px;
+                        letter-spacing: 0.4px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:1280px) {
+    #skill-section{
+        .row{
+            .title{
+                width: 34%;
+            }
+            .technology{
+                width: 66%;
+                padding-left: 3px;
+
+                .box{
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    #skill-section{
+        .row2{
+            margin-top: 25px !important;
+        }
+        .row{
+            flex-direction: column;
+            margin-top: 48px;
+            .title{
+                width: 100%;
+                h2{
+                    padding-bottom: 24px;
+                }
+            }
+            .technology{
+                width: 100%;
+                padding-left: 0px;
+
+                .box{
+                    padding-top: 57px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:1024px) {
+    #skill-section{
+        .row{
+            .title{
+                h2{
+                    padding-bottom: 27px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width:480px) {
+    #skill-section{
+        .row{
+            .technology{
+                .box{
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
