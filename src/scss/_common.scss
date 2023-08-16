@@ -26,7 +26,6 @@
 
 .btn{
     text-decoration: none;
-    color: $white;
     font-size: 20px;
     padding: 10px 20px;
     display: block;
@@ -34,13 +33,10 @@
     width: fit-content;
     border-radius: 10px;
     margin-top: 30px;
-
-    &:hover{
-        transition: all .3s ease-in-out;
-        color: $yellow;
-        box-shadow: 0px 3px 7px $white;
-    }
+    color: $yellow;
+    box-shadow: 0px 3px 7px $white;
 }
+
 
 @media screen and (max-width:540px){
     .section-nav{

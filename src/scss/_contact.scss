@@ -16,7 +16,7 @@
         }
         
         .email-btn{
-            font-size: 20px;
+            font-size: 18px;
             text-decoration: none;
             color:$white;
             background: transparent;
@@ -26,6 +26,13 @@
             &:hover{
                 color: $yellow;
             }
+        }
+
+        span{
+            font-size: 10px;
+            color: $yellow;
+            margin-top: 10px;
+            display: block;
         }
     }   
     
@@ -44,7 +51,7 @@
     #contact{
         margin-top: 96px;
         .container{
-            max-width: 92%;
+            max-width: 80%;
 
             .available{
                 font-size: 28px;

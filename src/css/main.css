@@ -30,15 +30,29 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: #fff;
+  position: relative;
 }
 header nav ul li a:hover {
   transition: all 0.2s ease-in-out;
   color: #e0a853;
-  text-decoration: underline;
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 0%;
+  background: #e0a853;
+  transition: all 0.4s ease-in-out;
+}
+header nav ul li a:hover::after {
+  width: 100%;
 }
 header .intro-section {
   padding-block: 56px;
   width: 100%;
+  margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -60,55 +74,56 @@ header .intro-section .left .para {
 }
 header .intro-section .right {
   flex: 2;
-  height: 500px;
+  padding: 20px;
 }
-header .intro-section .right img {
+header .intro-section .right .image-wrapper {
+  height: 500px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px 1px #e0a853;
+  overflow: hidden;
+}
+header .intro-section .right .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: grayscale(1);
-  border-radius: 20px;
-  border: 2px solid white;
+  object-fit: contain;
 }
 
-@media (min-width: 1281px) and (max-width: 2033px) {
-  .outer-container .wrapper header .intro-section {
-    max-width: 75%;
-  }
-}
 @media (max-width: 1280px) {
-  .outer-container .wrapper header .intro-section .intro {
+  .outer-container header .intro-section .intro {
     font-size: 48px;
     line-height: 48px;
   }
 }
 @media (max-width: 1024px) {
-  .outer-container .wrapper header nav ul li {
+  .outer-container header nav ul li {
     margin-left: 16px;
   }
 }
 @media (max-width: 768px) {
-  .outer-container .wrapper header nav ul {
+  .outer-container header nav ul {
     display: none;
   }
-  .outer-container .wrapper header .intro-section {
+  .outer-container header .intro-section {
     flex-direction: column;
     align-items: center;
   }
-  .outer-container .wrapper header .intro-section .left {
+  .outer-container header .intro-section .left {
     flex: auto;
   }
-  .outer-container .wrapper header .intro-section .left .intro {
+  .outer-container header .intro-section .left .intro {
     font-size: 36px;
     line-height: 40px;
   }
-  .outer-container .wrapper header .intro-section .left .para {
+  .outer-container header .intro-section .left .para {
     font-size: 16px;
     line-height: 20px;
   }
-  .outer-container .wrapper header .intro-section .right {
+  .outer-container header .intro-section .right {
     flex: auto;
     margin-top: 50px;
+  }
+  .outer-container header .intro-section .right .image-wrapper {
+    height: auto;
   }
 }
 .section-nav {
@@ -121,7 +136,7 @@ header .intro-section .right img {
   left: 0;
   border-bottom: 1px solid white;
   margin-bottom: 32px;
-  background: #0c0c0c;
+  background: #000;
   z-index: 999999;
 }
 .section-nav .dot {
@@ -138,7 +153,6 @@ header .intro-section .right img {
 
 .btn {
   text-decoration: none;
-  color: #fff;
   font-size: 20px;
   padding: 10px 20px;
   display: block;
@@ -146,9 +160,6 @@ header .intro-section .right img {
   width: fit-content;
   border-radius: 10px;
   margin-top: 30px;
-}
-.btn:hover {
-  transition: all 0.3s ease-in-out;
   color: #e0a853;
   box-shadow: 0px 3px 7px #fff;
 }
@@ -167,14 +178,14 @@ header .intro-section .right img {
 #what .table .heading {
   background: rgba(255, 255, 255, 0.1);
   display: flex;
-  border-bottom: 2px solid #0c0c0c;
+  border-bottom: 2px solid #000;
   font-weight: 600;
 }
 #what .table .row {
   background: rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #0c0c0c;
+  border-bottom: 2px solid #000;
 }
 #what .table .row:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -348,7 +359,7 @@ header .intro-section .right img {
   margin-bottom: 8px;
 }
 #contact .container .email-btn {
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   color: #fff;
   background: transparent;
@@ -357,6 +368,12 @@ header .intro-section .right img {
 }
 #contact .container .email-btn:hover {
   color: #e0a853;
+}
+#contact .container span {
+  font-size: 10px;
+  color: #e0a853;
+  margin-top: 10px;
+  display: block;
 }
 #contact .footer {
   margin-top: 192px;
@@ -373,7 +390,7 @@ header .intro-section .right img {
     margin-top: 96px;
   }
   #contact .container {
-    max-width: 92%;
+    max-width: 80%;
   }
   #contact .container .available {
     font-size: 28px;
@@ -413,18 +430,29 @@ header .intro-section .right img {
   padding: 0;
 }
 
-body {
-  position: relative;
-  max-height: 100vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 .scroll-hidden::-webkit-scrollbar {
   display: none;
 }
 
-.links {
+.theme {
+  font-family: "Lexend", sans-serif;
+  background: #000;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.theme ::selection {
+  background: #e0a853;
+}
+.theme .outer-container {
+  width: 100%;
+  max-width: 90%;
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+.theme .links {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -442,81 +470,50 @@ body {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
   z-index: 9999999;
-  background: #0c0c0c;
+  background: #000;
 }
-.links a {
+.theme .links a {
   width: 24px;
   height: 24px;
 }
-.links a object {
+.theme .links a object {
   width: 100%;
   height: 100%;
 }
-.links a img {
+.theme .links a img {
   width: 100%;
   height: 100%;
 }
-.links:hover {
+.theme .links:hover {
   transition: box-shadow 0.2s ease-in-out;
   box-shadow: 0px 0px 10px #e0a853;
 }
-
-.theme {
-  font-family: "Lexend", sans-serif;
-  background: #0c0c0c;
-  color: #fff;
+.theme .upArrow {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  z-index: 99999999999;
+  box-shadow: 0px 0px 10px 2px #e0a853;
+  border-radius: 50%;
+  background: #000;
 }
-.theme ::selection {
-  background: #e0a853;
-}
-.theme .outer-container {
+.theme .upArrow img {
   width: 100%;
-}
-.theme .outer-container .wrapper {
-  width: 100%;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  height: 100%;
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 1450px) {
   .theme .outer-container {
-    max-width: 1920px;
+    max-width: 1140px;
     margin-inline: auto;
-  }
-  .theme .outer-container .wrapper {
-    width: 100%;
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-}
-@media (min-width: 1601px) and (max-width: 1920px) {
-  .outer-container .wrapper {
-    padding-left: 10rem !important;
-    padding-right: 10rem !important;
-  }
-}
-@media (min-width: 1281px) and (max-width: 1600px) {
-  .outer-container .wrapper {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
-@media (min-width: 769px) and (max-width: 1280px) {
-  .theme .outer-container .wrapper {
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
   }
 }
 @media (max-width: 768px) {
-  .theme .outer-container .wrapper {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
-  }
-}
-@media (max-width: 480px) {
-  .theme .outer-container .wrapper {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+  .theme .upArrow {
+    right: 50px;
   }
 }
 
