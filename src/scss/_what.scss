@@ -29,16 +29,16 @@
             width: 25%;
         }
         .h-col2{
-            padding: 13px 0 13px 0;
-            width: 34%;
+            padding-block: 13px;
+            width: 35%;
             margin-left: -1px;
         }
         .h-col3{
-            padding: 13px 0 13px 13px;
-            width: 21%;
+            padding-block: 13px;
+            width: 20%;
         }
         .h-col4{
-            padding: 13px 0 13px 0;
+            padding-block: 13px;
             width: 20%;
         }
 
@@ -47,22 +47,26 @@
             padding:9px 0 9px 16px ;
         }
         .col2{
-            width: 36%;
-            padding:9px 0 9px 0 ;
-            margin-left: 8px;
+            width: 35%;
+            padding-block: 9px;
         }
         .col3{
-            width: 19%;
-            padding:9px 3px 9px 5px ;
+            width: 20%;
+            padding-block: 9px;
         }
         .col4{
-            width: 22%;
-            padding:9px 13px 9px 0 ;
+            width: 20%;
+            padding-block: 9px;
 
             a{
                 color: $white;
                 text-decoration: none;
                 border-bottom: 1px solid white;
+
+                &:hover{
+                    color: $yellow;
+                    border-color: $yellow;
+                }
             }
         }
     }
@@ -78,11 +82,10 @@
             }
 
             .h-col1, .col1{
-                width: 43%;
-                padding: 8px 0 8px 12px;
+                width: 70%;
             }
-            .col4{
-                width: 57%;
+            .h-col4, .col4{
+                width: 30%;
             }
         }
     }
@@ -94,10 +97,10 @@
 
         .table{
             .h-col1, .col1{
-                width: 70%;
+                width: 60%;
             }
             .col4{
-                width: 30%;
+                width: 40%;
             }
         }
     }

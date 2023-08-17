@@ -8,7 +8,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 20px;
+  padding-block: 30px 20px;
 }
 header nav .logo {
   width: 224px;
@@ -98,6 +98,9 @@ header .intro-section .right .image-wrapper img {
   .outer-container header nav ul li {
     margin-left: 16px;
   }
+  .outer-container header .intro-section .right .image-wrapper {
+    height: 420px;
+  }
 }
 @media (max-width: 768px) {
   .outer-container header nav ul {
@@ -121,9 +124,6 @@ header .intro-section .right .image-wrapper img {
   .outer-container header .intro-section .right {
     flex: auto;
     margin-top: 50px;
-  }
-  .outer-container header .intro-section .right .image-wrapper {
-    height: auto;
   }
 }
 .section-nav {
@@ -195,16 +195,16 @@ header .intro-section .right .image-wrapper img {
   width: 25%;
 }
 #what .table .h-col2 {
-  padding: 13px 0 13px 0;
-  width: 34%;
+  padding-block: 13px;
+  width: 35%;
   margin-left: -1px;
 }
 #what .table .h-col3 {
-  padding: 13px 0 13px 13px;
-  width: 21%;
+  padding-block: 13px;
+  width: 20%;
 }
 #what .table .h-col4 {
-  padding: 13px 0 13px 0;
+  padding-block: 13px;
   width: 20%;
 }
 #what .table .col1 {
@@ -212,22 +212,25 @@ header .intro-section .right .image-wrapper img {
   padding: 9px 0 9px 16px;
 }
 #what .table .col2 {
-  width: 36%;
-  padding: 9px 0 9px 0;
-  margin-left: 8px;
+  width: 35%;
+  padding-block: 9px;
 }
 #what .table .col3 {
-  width: 19%;
-  padding: 9px 3px 9px 5px;
+  width: 20%;
+  padding-block: 9px;
 }
 #what .table .col4 {
-  width: 22%;
-  padding: 9px 13px 9px 0;
+  width: 20%;
+  padding-block: 9px;
 }
 #what .table .col4 a {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid white;
+}
+#what .table .col4 a:hover {
+  color: #e0a853;
+  border-color: #e0a853;
 }
 
 @media (max-width: 1024px) {
@@ -235,23 +238,22 @@ header .intro-section .right .image-wrapper img {
     display: none;
   }
   #what .table .h-col1, #what .table .col1 {
-    width: 43%;
-    padding: 8px 0 8px 12px;
+    width: 70%;
   }
-  #what .table .col4 {
-    width: 57%;
+  #what .table .h-col4, #what .table .col4 {
+    width: 30%;
   }
 }
 @media (max-width: 480px) {
   #what .table .h-col1, #what .table .col1 {
-    width: 70%;
+    width: 60%;
   }
   #what .table .col4 {
-    width: 30%;
+    width: 40%;
   }
 }
 #skill-section {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 #skill-section .row2 {
   margin-top: 39px !important;
@@ -374,9 +376,20 @@ header .intro-section .right .image-wrapper img {
   color: #e0a853;
   margin-top: 10px;
   display: block;
+  width: fit-content;
+}
+#contact .thanks-quote {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 30px;
+}
+#contact .thanks-quote .thank-word {
+  font-style: italic;
+  color: #e0a853;
 }
 #contact .footer {
-  margin-top: 192px;
+  margin-top: 80px;
   border-top: 2px solid white;
 }
 #contact .footer p {
@@ -400,7 +413,7 @@ header .intro-section .right .image-wrapper img {
     margin-bottom: 10px;
   }
   #contact .footer {
-    margin-top: 144px;
+    margin-top: 60px;
   }
 }
 @media (max-width: 1024px) {
@@ -415,7 +428,7 @@ header .intro-section .right .image-wrapper img {
     line-height: 32px;
   }
   #contact .footer {
-    margin-top: 56px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 768px) {

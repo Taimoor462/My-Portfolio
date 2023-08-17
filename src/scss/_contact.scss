@@ -33,11 +33,24 @@
             color: $yellow;
             margin-top: 10px;
             display: block;
+            width: fit-content;
         }
     }   
+
+    .thanks-quote{
+        text-align: center;
+        font-size: 14px;
+        color: $white;
+        margin-top: 30px;
+
+        .thank-word {
+            font-style: italic;
+            color: $yellow;
+        }
+    }
     
     .footer{
-        margin-top: 192px;
+        margin-top: 80px;
         border-top:2px solid white ;
         p{
             font-size: 14px;
@@ -63,7 +76,7 @@
         }
 
         .footer{
-            margin-top: 144px;
+            margin-top: 60px;
         }
     }
 }
@@ -80,7 +93,7 @@
         }
 
         .footer{
-            margin-top: 56px;
+            margin-top: 40px;
         }
     }
 }

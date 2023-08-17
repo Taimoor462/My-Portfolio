@@ -7,7 +7,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-block: 20px;
+        padding-block:30px 20px;
     
         .logo{
             width:224px;
@@ -133,6 +133,13 @@ header{
                         }
                     }
                 }
+                .intro-section{
+                    .right{
+                        .image-wrapper{
+                            height: 420px;
+                        }
+                    }
+                }
             }
     }
 }
@@ -164,10 +171,6 @@ header{
                     .right{
                         flex: auto;
                         margin-top: 50px;
-
-                        .image-wrapper{
-                            height: auto;
-                        }
                     }
                 }
             }
