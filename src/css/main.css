@@ -348,6 +348,45 @@ header .intro-section .right .image-wrapper img {
     grid-template-columns: 1fr 1fr;
   }
 }
+#experience {
+  margin-top: 120px;
+}
+#experience .job_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#experience .job_container .left, #experience .job_container .right {
+  flex: 1;
+}
+#experience .job_container .left .job_label, #experience .job_container .right .job_label {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#experience .job_container .left .lignt_text, #experience .job_container .right .lignt_text {
+  font-size: 14px;
+  opacity: 0.7;
+}
+#experience .job_container .left .para, #experience .job_container .right .para {
+  margin-top: 20px;
+}
+#experience .job_container .left .para span, #experience .job_container .right .para span {
+  color: #e0a853;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  #experience {
+    margin-top: 70px;
+  }
+  #experience .job_container {
+    flex-direction: column;
+  }
+  #experience .job_container .left {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 30px;
+  }
+}
 #contact {
   margin-top: 120px;
 }
